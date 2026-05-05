@@ -1,20 +1,31 @@
 "use client";
-
-import { useState } from "react";
-
+import React, { useState } from "react";
 import MyButton from "./components/button";
+import Countertable from "./components/countertable";
+ 
+export default function home() {
+    
+  const [count, setCount] = useState(0);
+  function handleClick() {
+    setCount(count + 1);
+  }
 
-export default function Home() {
-    const [count, setCount] = useState(0);
-
-    function handleClick() {
-        setCount(count + 1);
-    }
-    return (
-        <main className="flex min-h-screen flex-col items-center p-24 gap-4">
-            <h1>React Counter Button</h1>
-            <MyButton count={count} onClick={handleClick} />
-            
-        </main>
-    );
+  return (
+    <div >
+      <Countertable />
+      <h1 className="flex min-h-screen flex-col items-center p-24 gap-4">React Counter Button 
+        <MyButton count={count} onClick={handleClick} /></h1>
+           
+    </div>
+    
+  );
+  
 }
+
+
+
+
+ 
+
+
+ 

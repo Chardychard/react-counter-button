@@ -1,14 +1,15 @@
 interface ButtonProps {
-    count: number;
+  count: number;
     onClick: () => void;
 }
-export default function MyButton({ count, onClick} : ButtonProps) {
-    return (
-        <button
-            onClick={onClick}
+export default function MyButton({ count, onClick }: ButtonProps) {
+   return (
+       <button
+           onClick={onClick}
             className="bg-blue-500 hover:bg-blue-700 rounded text-white font-bold px-4 py-2"
         >
-            I have been clicked {count} times
+          I have clicked {count} times
+
         </button>
     );
 }
